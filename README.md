@@ -1,2 +1,2 @@
 # SongBird
-educational project in RS school #2
+https://andykrau.github.io/SongBird/songbird/index.html
