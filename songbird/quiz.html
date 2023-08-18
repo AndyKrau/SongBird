@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BirdSong</title>
+    <link rel="stylesheet" href="./css/quiz.css">
+    <script type="module" src="./script/app.js" defer></script>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__top">
+                <a href="./index.html"><img class="header__logo" src="./media/img/songbird_logo.png" alt="songbird logo"></a>
+                <div class="header__score">
+                    <span>Score:</span>
+                    <span class="score__points">0</span>
+                </div>
+                
+            </div>
+            <nav class="header__bird-nav">
+                <ul class="bird-nav__list">
+                    <li class="bird-nav__item active">Разминка</li>
+                    <li class="bird-nav__item">Воробьиные</li>
+                    <li class="bird-nav__item">Лесные птицы</li>
+                    <li class="bird-nav__item">Певчие птицы</li>
+                    <li class="bird-nav__item">Хищные птицы</li>
+                    <li class="bird-nav__item">Морские птицы</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main-content">
+    <section class="question">
+        <div class="wrapper">
+            <img class="question__img" src="#" alt="What bird?">
+            <div class="question__body">
+                <ul class="question__group-list">
+                    <li class="question__group-list-item">
+                        <h3 id="question__bird-name"></h3>
+                    </li>
+                    <li class="question__group-list-item">
+                        <div class="audio-pleer">
+                            <audio id="question__audio" src="" controls alt="question audio"> 
+                                <!-- <source id="question__audio" src="#" type="audio/mpeg"> -->
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="answer">
+        <div class="wrapper">
+            <div class="wrapper__row2">
+                <div class="answer__option">
+                    <ul id="answer__group-list">
+                        <li class="answer__group-list-item"><span class="group-list-item__marker"></span><span id="answer__group-list-item"></span></li>
+                        <li class="answer__group-list-item"><span class="group-list-item__marker"></span><span id="answer__group-list-item"></span></li>
+                        <li class="answer__group-list-item"><span class="group-list-item__marker"></span><span id="answer__group-list-item"></span></li>
+                        <li class="answer__group-list-item"><span class="group-list-item__marker"></span><span id="answer__group-list-item"></span></li>
+                        <li class="answer__group-list-item"><span class="group-list-item__marker"></span><span id="answer__group-list-item"></span></li>
+                        <li class="answer__group-list-item"><span class="group-list-item__marker"></span><span id="answer__group-list-item"></span></li>
+                    </ul>
+                </div>
+
+                <div class="answer__bird-info">
+                    <div class="bird-info__body no-display">
+                        <img class="bird-info__img" src="#" alt="songbird logo">
+                        <div class="bird-info__list">
+                            <ul class="bird-info__group-list">
+                                <li class="bird-info__group-list-item"><h4 id="birdName"></h4></li>
+                                <li class="bird-info__group-list-item"><span id="birdNameEn"></span></li>
+                                <li class="bird-info__group-list-item">
+                                    <div class="audio-pleer" >
+                                        <audio id="bird-info__audio" src="#" controls>
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Прослушайте аудио-запись и отгадайте иполнителя. Максимальное количество баллов за правильный ответ - 5 баллов,
+                        при каждом неправильном ответе отнимается один балл.
+                        </p>
+                    </div>
+                </div>
+                <button class="button_next">Next level</button>
+            </div>
+        </div>
+    </section>
+    <section class="finish-banner no-display">
+        <div class="wrapper">
+            <div class="finish-banner__text">
+                <h2>
+                    Поздравляем!
+                </h2>
+                <p>
+                    Вы прошли викторину и набрали <span class="final-score">#</span> из 30 возможных баллов.
+                </p>
+                <button class="finish-banner__button">
+                    Попробовать ещё раз!
+                </button>
+            </div>
+        </div>    
+    </section>
+    </section>
+</body>
+<footer class="footer">
+    <div class="footer__wrapper">
+        <span class="footer__span">© 2022 AndyKrau, Inc.</span>
+        <div class="footer__icons">
+            <a href="https://github.com/AndyKrau"><img class="footer__logo-RS" src="./media/img/github.png" alt="https://github.com/AndyKrau"></a>
+            <a href="https://rs.school/js/"><img class="footer__logo-RS" src="./media/img/logo_rs_text.svg" alt="shttps://rs.school/js/"></a>
+        </div>
+        
+    </div>
+</footer>
+</html>

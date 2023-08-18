@@ -1,0 +1,83 @@
+html { 
+    background: url('../media/img/background_start.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+}
+
+.fixed {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.button_start {
+    /* width: 500px;
+    height: 100px; */
+    color: #4b597c;
+    background-color: #EDBA6A;
+    border: none;
+    border-radius: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    padding: 30px 130px;
+    margin: 30px;
+    box-shadow: 0 0 101px 5px rgba(221, 221, 221, 0.8);
+}
+
+.button_start:active {
+    background-color: #C1955B;
+    box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.8);
+    color: azure;
+}
+
+.button_start:hover {
+    background-color: #C1955B;
+    box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.8);
+    /* color: azure; */
+    /* border: 1px solid white; */
+}
+
+#blink {
+    animation: fade 2800ms infinite;
+}
+
+@keyframes fade {
+    0% { box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.1); }
+    10% { box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.9);}
+    30% { box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.3);}
+    50% { box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.9);}
+    70% { box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.1);}
+    100% { box-shadow: 0 0 100px 15px rgba(221, 221, 221, 0.1); }
+    } 
+
+    @media screen and (max-width: 650px) {
+        .button_start {
+            font-size: 40px;
+            font-weight: 800;
+            padding: 30px 90px;
+            margin: 30px;
+            box-shadow: 0 0 101px 5px rgba(221, 221, 221, 0.8);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .button_start {
+            font-size: 30px;
+            font-weight: 800;
+            padding: 20px 35px;
+            margin: 30px;
+            box-shadow: 0 0 101px 5px rgba(221, 221, 221, 0.8);
+        }
+    }
