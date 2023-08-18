@@ -15,6 +15,7 @@ firstLoad(count);
 
 let clickNext = document.querySelector('.button_next');
 clickNext.addEventListener('click', () => {
+    stopAudio();
     count++;
     // console.log('addEventListener count--->', count)
 
@@ -52,6 +53,7 @@ clickNext.addEventListener('click', () => {
         showButton.classList.remove('active_button');
 
     firstLoad(count);
+    
 });
 
 let clickOnceAgain = document.querySelector('.finish-banner__button');
@@ -75,8 +77,6 @@ clickOnceAgain.addEventListener('click', () => {
 
 
 //_________Functions______________________________________________________________________________________________
-
-
 
 function firstLoad(count) {
     let birdClass = count;
@@ -105,16 +105,16 @@ function firstLoad(count) {
 
 }
 
-
-
 function loadTestAudio(item) { // загрузка  аудио тестовой страницы
     let test_audio = document.querySelector('#question__audio');
     test_audio.src = item;
 };
 
 function stopAudio() { // стоп пение при правильном ответе
+    let info_audio = document.querySelector('#bird-info__audio');
     let test_audio = document.querySelector('#question__audio');
     test_audio.pause();
+    info_audio.pause();
 }
 
 function loadTestNonamePicture() { // загрузка noname картинки
@@ -141,6 +141,7 @@ function clickOnAnswer(randName, randBird) { // отслкживаем клик 
         // console.log('getElementById, answer__group:', t );
         // console.log('getElementById, answer__group:', t.innerHTML);
         // console.log('checkRightAnswer, check:', t.previousElementSibling);
+
         if(t){
             checkRightAnswer(randName, t, randBird);
         }
