@@ -103,7 +103,7 @@ function firstLoad(count) {
 
 }
 
-function loadTestAudio(item) { // загрузка  аудио тестовой страницы
+function loadTestAudio(item) { // загрузка аудио тестовой страницы
     let test_audio = document.querySelector('#question__audio');
     test_audio.src = item;
 };
@@ -132,7 +132,7 @@ function loadTestAnswer(birdClass) { // загрузка имен птиц дл�
     }
 };
 
-function clickOnAnswer(randName, randBird) { // отслкживаем клик по ответу из списка
+function clickOnAnswer(randName, randBird) { // отслеживаем клик по ответу из списка
     document.getElementById('answer__group-list').addEventListener('click', (event)=>{
         const t = event.target.closest('li');
         
@@ -191,7 +191,7 @@ function checkRightAnswer(randName, currentItem, randBird) { // Проверка
         stopAudio();
 
     } else {
-        soundClickInCorrect();
+        
         let parentItem = currentItem.firstElementChild;
         parentItem.classList.remove('correct-answer');
         parentItem.classList.add('incorrect-answer');
@@ -256,17 +256,17 @@ function showBirdInfoIncorrect(bird) { // Выводит скрытую инфо
     img.style.width = '200px';
     img.style.height = '155px';
 
-        let audio = document.querySelector('#bird-info__audio');
-        audio.src = bird.audio;
+    let audio = document.querySelector('#bird-info__audio');
+    audio.src = bird.audio;
 
-            let birdName = document.querySelector('#birdName');
-            birdName.innerHTML = bird.name;
+    let birdName = document.querySelector('#birdName');
+    birdName.innerHTML = bird.name;
 
-                let birdNameEn = document.querySelector('#birdNameEn');
-                birdNameEn.innerHTML = bird.species;
+    let birdNameEn = document.querySelector('#birdNameEn');
+    birdNameEn.innerHTML = bird.species;
 
-                    let description = document.querySelector('.description');
-                    description.innerHTML = bird.description;
+    let description = document.querySelector('.description');
+    description.innerHTML = bird.description;
 }
 
 function returnQuestionPosition() {  // Возвращает викторину к закрытым полям и исходному состоянию
@@ -292,12 +292,6 @@ function returnQuestionPosition() {  // Возвращает викторину 
 function soundClickCorrect() {
     let audio = new Audio(); // Создаём новый элемент Audio
     audio.src = './media/audio/correct.mp3'; // Указываем путь к звуку "клика"
-    audio.autoplay = true; // Автоматически запускаем
-}
-
-function soundClickInCorrect() {
-    let audio = new Audio(); // Создаём новый элемент Audio
-    audio.src = './media/audio/incorrect.mp3'; // Указываем путь к звуку "клика"
     audio.autoplay = true; // Автоматически запускаем
 }
 
