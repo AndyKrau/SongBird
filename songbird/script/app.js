@@ -1,7 +1,6 @@
 import birdsData from './bird.js';
 
 let count = 0;
-
 let rand;
 let randBird;
 let randId; 
@@ -11,7 +10,6 @@ let randImage;
 let birdGroup;
 
 firstLoad(count);
-
 
 let clickNext = document.querySelector('.button_next');
 clickNext.addEventListener('click', () => {
@@ -155,7 +153,6 @@ function checkRightAnswer(randName, currentItem, randBird) { // Проверка
     // console.log('checkRightAnswer, randItem:', randName);  
 
     if (currentName === randName) {
-
         soundClickCorrect();
         // console.log('checkRightAnswer, check:', 'Same!');
         let parentItem = currentItem.firstElementChild;
@@ -245,7 +242,6 @@ function showBirdInfo(bird) { // Выводит скрытую информац�
 
         let questionName = document.querySelector('#question__bird-name');
         questionName.innerHTML = bird.name;
-        
 }
 
 function showBirdInfoIncorrect(bird) { // Выводит скрытую информацию о неправильной птичке 
@@ -291,15 +287,12 @@ function returnQuestionPosition() {  // Возвращает викторину 
         item.classList.remove('incorrect-answer');
         item.classList.remove('correct-answer');
     });
-
-
 }
 
 function soundClickCorrect() {
     let audio = new Audio(); // Создаём новый элемент Audio
     audio.src = './media/audio/correct.mp3'; // Указываем путь к звуку "клика"
     audio.autoplay = true; // Автоматически запускаем
-
 }
 
 function soundClickInCorrect() {
